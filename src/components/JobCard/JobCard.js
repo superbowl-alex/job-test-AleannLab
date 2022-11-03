@@ -1,4 +1,5 @@
-import { useLocation, useNavigate, Link } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
+import moment from 'moment';
 
 const JobCard = ({ job }) => {
   const { pictures, title, name, address, updatedAt } = job;
@@ -10,14 +11,14 @@ const JobCard = ({ job }) => {
         <img src={pictures[0]} alt={name} />
         <div>
           <h2>{title}</h2>
-          <div>Deparment name • {name}</div>
-          <div>{address}</div>
+          <p>Deparment name • {name}</p>
+          <p>{address}</p>
         </div>
         <div>
           <div>5 stars</div>
           <div>
             <div>SVG</div>
-            <div>Posted {updatedAt} days ago</div>
+            <p>Posted {moment(updatedAt).fromNow()} </p>
           </div>
         </div>
       </Link>

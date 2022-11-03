@@ -32,6 +32,7 @@ const JobList = () => {
           <JobCard key={job.id} job={job}></JobCard>
         ))}
       </ul>
+      <div>Pagination</div>
     </>
   );
 };

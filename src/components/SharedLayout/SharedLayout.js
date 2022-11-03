@@ -5,7 +5,6 @@ const SharedLayout = () => {
   return (
     <div>
       <Outlet />
-      <div>Pagination</div>
       <GlobalStyles />
     </div>
   );
