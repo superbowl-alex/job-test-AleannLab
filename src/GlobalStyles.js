@@ -6,10 +6,6 @@ const GlobalStyles = () => {
       styles={css`
         @import-normalize; /* bring in normalize.css styles */
 
-        :root {
-          --toastify-color-warning: #05807c;
-        }
-
         html {
           box-sizing: border-box;
           width: 100vw;
@@ -24,12 +20,8 @@ const GlobalStyles = () => {
 
         body {
           margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, 'Comic Sans MS',
-            'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
-            'Droid Sans', 'Helvetica Neue', sans-serif;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
           background-color: #def2f1;
+          font-family: Proxima Nova Rg, Roboto, serif;
         }
 
         body::-webkit-scrollbar {

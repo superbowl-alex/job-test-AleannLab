@@ -8,7 +8,7 @@ const JobCard = ({ job }) => {
   return (
     <li>
       <Link to="/details" state={{ from: location, job: job }}>
-        <img src={pictures[0]} alt={name} />
+        <img src={pictures[0]} alt={name} loading="lazy" />
         <div>
           <h2>{title}</h2>
           <p>Deparment name • {name}</p>

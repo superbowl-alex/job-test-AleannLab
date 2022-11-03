@@ -61,7 +61,7 @@ const DetailedJob = () => {
           <ul>
             {pictures.map((picture, index) => (
               <li key={index}>
-                <img src={picture} alt={name} />
+                <img src={picture} alt={name} loading="lazy" />
               </li>
             ))}
           </ul>
