@@ -1,13 +1,28 @@
 {
   "files": {
-    "main.css": "/job-test-AleannLab/static/css/main.7acaea2f.css",
-    "main.js": "/job-test-AleannLab/static/js/main.d5833287.js",
+    "main.css": "/job-test-AleannLab/static/css/main.db98d777.css",
+    "main.js": "/job-test-AleannLab/static/js/main.c728f4e5.js",
+    "static/media/Roboto-Regular.eot": "/job-test-AleannLab/static/media/Roboto-Regular.30b57652c88c5dbd65de.eot",
+    "static/media/Roboto-Regular.ttf": "/job-test-AleannLab/static/media/Roboto-Regular.25e40da956314b12d333.ttf",
+    "static/media/ProximaNova-Light.eot": "/job-test-AleannLab/static/media/ProximaNova-Light.dc970b778a98f9a75423.eot",
+    "static/media/ProximaNova-Light.ttf": "/job-test-AleannLab/static/media/ProximaNova-Light.f70705f204f9b7f11d76.ttf",
+    "static/media/ProximaNova-Semibold.eot": "/job-test-AleannLab/static/media/ProximaNova-Semibold.4d878f520a275616509b.eot",
+    "static/media/ProximaNova-Regular.eot": "/job-test-AleannLab/static/media/ProximaNova-Regular.d97f8f32c098b28c3ab0.eot",
+    "static/media/ProximaNova-Semibold.ttf": "/job-test-AleannLab/static/media/ProximaNova-Semibold.be42827ac88aca64dbf0.ttf",
+    "static/media/ProximaNova-Regular.ttf": "/job-test-AleannLab/static/media/ProximaNova-Regular.b078618b41b9b6629ea0.ttf",
+    "static/media/ProximaNova-Bold.eot": "/job-test-AleannLab/static/media/ProximaNova-Bold.787088b281e017f8c449.eot",
+    "static/media/ProximaNova-Bold.ttf": "/job-test-AleannLab/static/media/ProximaNova-Bold.7722451a8c88b6100185.ttf",
+    "static/media/Roboto-Regular.woff": "/job-test-AleannLab/static/media/Roboto-Regular.31012f9b3e3da44f87e8.woff",
+    "static/media/ProximaNova-Light.woff": "/job-test-AleannLab/static/media/ProximaNova-Light.6f5ad2ca80abea2876d4.woff",
+    "static/media/ProximaNova-Regular.woff": "/job-test-AleannLab/static/media/ProximaNova-Regular.99528640efded3e12591.woff",
+    "static/media/ProximaNova-Bold.woff": "/job-test-AleannLab/static/media/ProximaNova-Bold.1f267da183b3d4fe3d5b.woff",
+    "static/media/ProximaNova-Semibold.woff": "/job-test-AleannLab/static/media/ProximaNova-Semibold.a71877a1eef65838ed4c.woff",
     "index.html": "/job-test-AleannLab/index.html",
-    "main.7acaea2f.css.map": "/job-test-AleannLab/static/css/main.7acaea2f.css.map",
-    "main.d5833287.js.map": "/job-test-AleannLab/static/js/main.d5833287.js.map"
+    "main.db98d777.css.map": "/job-test-AleannLab/static/css/main.db98d777.css.map",
+    "main.c728f4e5.js.map": "/job-test-AleannLab/static/js/main.c728f4e5.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.d5833287.js"
+    "static/css/main.db98d777.css",
+    "static/js/main.c728f4e5.js"
   ]
 }
