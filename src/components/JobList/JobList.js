@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { fetchJobs } from 'services/fetchJobs';
 import ErrorMessage from 'components/ErrorMessage';
 import JobCard from 'components/JobCard';
+import { List, Item } from './JobList.styled';
 
 const JobList = () => {
   const [jobs, setJobs] = useState([]);
@@ -27,11 +28,13 @@ const JobList = () => {
   return (
     <>
       {error && <ErrorMessage />}
-      <ul>
+      <List>
         {jobs.map(job => (
-          <JobCard key={job.id} job={job}></JobCard>
+          <Item key={job.id}>
+            <JobCard job={job}></JobCard>
+          </Item>
         ))}
-      </ul>
+      </List>
       <div>Pagination</div>
     </>
   );

@@ -4,11 +4,11 @@ export const Container = styled.div`
   width: 100%;
   margin: 0 auto;
 
-  @media screen and (min-width: 480px) {
-    width: 480px;
+  @media screen and (min-width: 414px) {
+    width: 414px;
   }
 
-  @media screen and (min-width: 1280px) {
-    width: 1280px;
+  @media screen and (min-width: 1400px) {
+    width: 1400px;
   }
 `;

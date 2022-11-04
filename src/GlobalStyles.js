@@ -4,8 +4,6 @@ const GlobalStyles = () => {
   return (
     <Global
       styles={css`
-        @import-normalize; /* bring in normalize.css styles */
-
         html {
           box-sizing: border-box;
           width: 100vw;
@@ -20,22 +18,8 @@ const GlobalStyles = () => {
 
         body {
           margin: 0;
-          background-color: #def2f1;
+          background-color: #f5f5f5;
           font-family: Proxima Nova Rg, Roboto, serif;
-        }
-
-        body::-webkit-scrollbar {
-          width: 16px;
-          height: 0;
-        }
-
-        body::-webkit-scrollbar-track {
-          background: #70c8c3;
-        }
-
-        body::-webkit-scrollbar-thumb {
-          background-color: #feffff;
-          border-radius: 3px;
         }
 
         h1,

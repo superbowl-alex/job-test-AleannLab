@@ -2,7 +2,10 @@ export const theme = {
   colors: {
     textDark: '#3A4562',
     textSecondary: '#878D9D',
-    white: 'rgb(255, 255, 255)',
+    cardMobileBacground: '#EFF0F5',
+    starsMobile: '#384564',
+    starsDesctop: '#38415D',
+    white: '#FFFFFF',
     primaryText: '#FEFFFF',
     secondaryText: '#174a5b',
     primaryBacground: '#DEF2F1',
@@ -53,9 +56,10 @@ export const theme = {
     heading: 1.125,
   },
   shadows: {
-    small: '0 2px 4px rgba(0, 0, 0, 0.2)',
-    middle: 'rgb(0 0 0 / 16%) 4px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px',
-    large: 'rgba(0, 0, 0, 0.35) 0px 5px 15px 0px',
+    cardMobile:
+      '0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2)',
+    cardDesctop:
+      '2px 1px 7px rgba(0, 0, 0, 0.08), 0px 2px 1px -1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.12)',
   },
   sizes: {},
 };
