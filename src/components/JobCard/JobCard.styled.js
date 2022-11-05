@@ -4,7 +4,6 @@ export const WrapCard = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column-reverse;
-  /* justify-content: center; */
   align-items: center;
   padding: 16px 16px 24px;
   color: ${p => p.theme.colors.textSecondary};

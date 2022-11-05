@@ -1,5 +1,23 @@
 import { Link, useLocation } from 'react-router-dom';
 import moment from 'moment';
+import {
+  Main,
+  Section,
+  Title,
+  NoteList,
+  WrapItem,
+  ButtonApplyTop,
+  SubTitle,
+  Post,
+  WrapSalary,
+  TextSalary,
+  ValueSalary,
+  WrapSubTitle,
+  Description,
+  ButtonApplyBottom,
+} from './DetailedJob.styled';
+import { ReactComponent as IconSave } from '../../images/star.svg';
+import { ReactComponent as IconShare } from '../../images/share.svg';
 
 const DetailedJob = () => {
   const location = useLocation();
@@ -8,6 +26,7 @@ const DetailedJob = () => {
     title,
     salary,
     updatedAt,
+    description,
     employment_type,
     benefits,
     pictures,
@@ -18,27 +37,36 @@ const DetailedJob = () => {
   } = location.state.job;
 
   return (
-    <main>
+    <Main>
       <div>
-        <section>
+        <Section>
           <div>
-            <h2>Job details</h2>
-            <ul>
-              <li>Save to my list</li>
-              <li>Share</li>
-            </ul>
+            <Title>Job details</Title>
+            <NoteList>
+              <WrapItem>
+                <IconSave width={21} height={20} />
+                <p>Save to my list</p>
+              </WrapItem>
+              <WrapItem>
+                <IconShare width={20} height={20} />
+                <p>Share</p>
+              </WrapItem>
+            </NoteList>
           </div>
-          <button type="button">Apply Now</button>
-          <div>
-            <h3>{title}</h3>
-            <p>&euro; {salary.replaceAll('k', ' 000')}</p>
-            <p>Brutto, per year</p>
-          </div>
-          <p>Posted {moment(updatedAt).fromNow()}</p>
-          <button type="button">Apply Now</button>
-        </section>
-        <section>
-          <h2>Additional info</h2>
+          <ButtonApplyTop type="button">Apply Now</ButtonApplyTop>
+          <WrapSubTitle>
+            <SubTitle>{title}</SubTitle>
+            <WrapSalary>
+              <TextSalary>Brutto, per year</TextSalary>
+              <ValueSalary>&euro; {salary.replaceAll('k', ' 000')}</ValueSalary>
+            </WrapSalary>
+          </WrapSubTitle>
+          <Post>Posted {moment(updatedAt).fromNow()}</Post>
+          <Description>{description}</Description>
+          <ButtonApplyBottom type="button">Apply Now</ButtonApplyBottom>
+        </Section>
+        <Section>
+          <Title>Additional info</Title>
           <div>
             <h3>Employment type</h3>
             <ul>
@@ -55,9 +83,9 @@ const DetailedJob = () => {
               ))}
             </ul>
           </div>
-        </section>
-        <section>
-          <h2>Attached images</h2>
+        </Section>
+        <Section>
+          <Title>Attached images</Title>
           <ul>
             {pictures.map((picture, index) => (
               <li key={index}>
@@ -65,8 +93,9 @@ const DetailedJob = () => {
               </li>
             ))}
           </ul>
-        </section>
-        <section>
+        </Section>
+        <Section>
+          <Title>Contacts</Title>
           <div>
             <p>Deparment name.</p>
             <p>{name}.</p>
@@ -75,10 +104,10 @@ const DetailedJob = () => {
             <p>{email}</p>
           </div>
           <div>Map</div>
-        </section>
+        </Section>
       </div>
       <Link to={backLinkHref}>Return to job board</Link>
-    </main>
+    </Main>
   );
 };
 

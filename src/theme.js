@@ -5,6 +5,7 @@ export const theme = {
     cardMobileBacground: '#EFF0F5',
     starsMobile: '#384564',
     starsDesctop: '#38415D',
+    noteDetilesMobile: 'rgba(56, 65, 93, 0.82)',
     white: '#FFFFFF',
     primaryText: '#FEFFFF',
     secondaryText: '#174a5b',
@@ -24,7 +25,7 @@ export const theme = {
   radii: {
     none: 'none',
     normal: '4px',
-    large: '10px',
+    large: '8px',
     round: '50%',
   },
   fonts: {
