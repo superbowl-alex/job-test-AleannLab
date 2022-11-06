@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/job-test-AleannLab/static/css/main.45b8a6b7.css",
-    "main.js": "/job-test-AleannLab/static/js/main.af8cd434.js",
+    "main.js": "/job-test-AleannLab/static/js/main.a2b91c3c.js",
     "static/media/Roboto-Regular.eot": "/job-test-AleannLab/static/media/Roboto-Regular.30b57652c88c5dbd65de.eot",
     "static/media/Roboto-Regular.ttf": "/job-test-AleannLab/static/media/Roboto-Regular.25e40da956314b12d333.ttf",
     "static/media/ProximaNova-Light.eot": "/job-test-AleannLab/static/media/ProximaNova-Light.dc970b778a98f9a75423.eot",
@@ -23,10 +23,10 @@
     "static/media/bookmark.svg": "/job-test-AleannLab/static/media/bookmark.4dc26749d0b0fe69d73a56e57d718d69.svg",
     "static/media/location.svg": "/job-test-AleannLab/static/media/location.4543f654c8b8bdfb1cb5097d3ebee781.svg",
     "main.45b8a6b7.css.map": "/job-test-AleannLab/static/css/main.45b8a6b7.css.map",
-    "main.af8cd434.js.map": "/job-test-AleannLab/static/js/main.af8cd434.js.map"
+    "main.a2b91c3c.js.map": "/job-test-AleannLab/static/js/main.a2b91c3c.js.map"
   },
   "entrypoints": [
     "static/css/main.45b8a6b7.css",
-    "static/js/main.af8cd434.js"
+    "static/js/main.a2b91c3c.js"
   ]
 }
