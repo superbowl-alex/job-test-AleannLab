@@ -1,4 +1,7 @@
 import styled from '@emotion/styled';
+import { Link } from 'react-router-dom';
+import { ReactComponent as Star } from '../../images/star.svg';
+import { ReactComponent as Bookmark } from '../../images/bookmark.svg';
 
 export const Main = styled.main`
   padding: 24px 15px 37px;
@@ -10,6 +13,14 @@ export const Main = styled.main`
 
 export const Section = styled.section`
   margin-bottom: 60px;
+  @media screen and (min-width: 1400px) {
+    width: 793px;
+    margin-bottom: 86px;
+  }
+`;
+
+export const HeaderWrap = styled.div`
+  position: relative;
 `;
 
 export const Title = styled.h2`
@@ -37,21 +48,64 @@ export const NoteList = styled.ul`
   line-height: 1.44;
   letter-spacing: -0.5px;
   margin-bottom: 32px;
+  @media screen and (min-width: 1400px) {
+    position: absolute;
+    top: 7px;
+    right: 0;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: -0.56px;
+    margin-bottom: 0;
+  }
 `;
 
 export const WrapItem = styled.li`
   display: flex;
   align-items: center;
   gap: 11px;
-  &:first-child > svg {
+  &:first-of-type > svg {
     fill-opacity: 0;
     stroke: ${p => p.theme.colors.noteDetilesMobile};
     stroke-width: 2px;
   }
 `;
 
+export const IconStar = styled(Star)`
+  @media screen and (min-width: 1400px) {
+    display: none;
+  }
+`;
+
+export const IconBookmark = styled(Bookmark)`
+  @media screen and (max-width: 1399px) {
+    display: none;
+  }
+`;
+
 export const ButtonApplyTop = styled.button`
+  width: 127px;
+  height: 52px;
+  display: block;
+  margin: 0 auto;
+  color: ${p => p.theme.colors.white};
+  background-color: ${p => p.theme.colors.starsMobile};
+  font-size: 12px;
+  line-height: 1.33;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: ${p => p.theme.radii.large};
+  border: none;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    transform: scale(1.01);
+  }
   display: none;
+  @media screen and (min-width: 1400px) {
+    margin-left: 0;
+    margin-top: 39px;
+    margin-bottom: 32px;
+    display: block;
+  }
 `;
 
 export const WrapSubTitle = styled.div`
@@ -66,6 +120,10 @@ export const SubTitle = styled.h3`
   line-height: 1.25;
   letter-spacing: -0.75px;
   font-weight: 700;
+  @media screen and (min-width: 1400px) {
+    width: 501px;
+    margin-bottom: 7px;
+  }
 `;
 
 export const WrapSalary = styled.div`
@@ -76,6 +134,10 @@ export const WrapSalary = styled.div`
   flex-direction: column;
   align-items: flex-end;
   gap: 4px;
+  @media screen and (min-width: 1400px) {
+    top: 0px;
+    flex-direction: column-reverse;
+  }
 `;
 export const TextSalary = styled.p`
   color: ${p => p.theme.colors.noteDetilesMobile};
@@ -98,6 +160,15 @@ export const Post = styled.p`
   letter-spacing: 0.19px;
   font-weight: 300;
   margin-bottom: 26px;
+  @media screen and (min-width: 1400px) {
+    opacity: 0.36;
+    font-family: Roboto, serif;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: -0.56px;
+    font-weight: 400;
+    margin-bottom: 7px;
+  }
 `;
 
 export const Description = styled.p`
@@ -105,6 +176,13 @@ export const Description = styled.p`
   font-size: 18px;
   line-height: 1.33;
   letter-spacing: -0.56px;
+  @media screen and (min-width: 1400px) {
+    font-family: Roboto, serif;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: -0.56px;
+    font-weight: 400;
+  }
 `;
 
 export const ButtonApplyBottom = styled.button`
@@ -125,4 +203,128 @@ export const ButtonApplyBottom = styled.button`
   &:hover {
     transform: scale(1.01);
   }
+  @media screen and (min-width: 1400px) {
+    margin-left: 0;
+  }
+`;
+
+export const WrapAdditional = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const ImageList = styled.ul`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`;
+
+export const ImageItem = styled.li`
+  width: 209px;
+  height: 115px;
+`;
+
+export const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+
+export const AddWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`;
+
+export const AddSubTitle = styled.h3`
+  color: ${p => p.theme.colors.noteDetilesMobile};
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: -0.56px;
+  font-weight: 400;
+  margin-bottom: 10px;
+`;
+
+export const AddList = styled.ul`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+`;
+
+export const AddItemType = styled.li`
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: -0.46px;
+  font-weight: 700;
+  padding: 17px 13px;
+  color: ${p => p.theme.colors.linkAddPrimary};
+  background-color: ${p => p.theme.colors.linkBacgroundAddPrimary};
+  border: 1px solid rgba(85, 105, 158, 0.3);
+  border-radius: ${p => p.theme.radii.large};
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    transform: scale(1.01);
+  }
+`;
+
+export const AddItemBenefits = styled.li`
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: -0.46px;
+  font-weight: 700;
+  padding: 17px 13px;
+  color: ${p => p.theme.colors.linkAddSecondary};
+  background-color: ${p => p.theme.colors.linkBacgroundAddSecondary};
+  border: 1px solid #ffcf00;
+  border-radius: ${p => p.theme.radii.large};
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    transform: scale(1.01);
+  }
+`;
+
+export const ContactsWrap = styled.div`
+  width: 372px;
+  margin: 0 auto;
+  color: ${p => p.theme.colors.contactsPrimary};
+  background-color: ${p => p.theme.colors.contactsBackground};
+  border-radius: ${p => p.theme.radii.large};
+`;
+
+export const ContactsText = styled.div`
+  height: 200px;
+  padding: 31px 60px;
+`;
+export const ContactsMap = styled.div`
+  height: 232px;
+`;
+
+export const ContactsName = styled.div`
+  font-size: 16px;
+  line-height: 1.22;
+  letter-spacing: 0.24px;
+  font-weight: 700;
+  margin-bottom: 17px;
+`;
+export const ContactsAddress = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 1.442;
+  letter-spacing: -0.5px;
+  margin-bottom: 6px;
+  & > svg {
+    opacity: 0.56;
+  }
+`;
+export const ContactsConnect = styled.div`
+  font-size: 16px;
+  line-height: 1.442;
+  letter-spacing: -0.5px;
+  color: ${p => p.theme.colors.contactsSecondary};
+`;
+
+export const BackLink = styled(Link)`
+  display: none;
 `;
