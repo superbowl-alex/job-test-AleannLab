@@ -6,6 +6,7 @@ import { ReactComponent as Bookmark } from '../../images/bookmark.svg';
 export const Main = styled.main`
   padding: 24px 15px 37px;
   @media screen and (min-width: 1400px) {
+    position: relative;
     padding-top: 56px;
     padding-bottom: 56px;
   }
@@ -35,7 +36,13 @@ export const Title = styled.h2`
   border-bottom-color: rgba(58, 69, 98, 0.13);
   margin-bottom: 24px;
   @media screen and (min-width: 1400px) {
-    padding-bottom: 12px;
+    padding-bottom: 9px;
+  }
+`;
+
+export const TitleContacts = styled(Title)`
+  @media screen and (min-width: 1400px) {
+    display: none;
   }
 `;
 
@@ -211,6 +218,9 @@ export const ButtonApplyBottom = styled.button`
 export const WrapAdditional = styled.div`
   display: flex;
   flex-direction: column;
+  @media screen and (min-width: 1400px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 export const ImageList = styled.ul`
@@ -233,7 +243,7 @@ export const Image = styled.img`
 export const AddWrap = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 22px;
 `;
 
 export const AddSubTitle = styled.h3`
@@ -261,34 +271,38 @@ export const AddItemType = styled.li`
   background-color: ${p => p.theme.colors.linkBacgroundAddPrimary};
   border: 1px solid rgba(85, 105, 158, 0.3);
   border-radius: ${p => p.theme.radii.large};
+  cursor: pointer;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
     transform: scale(1.01);
   }
+  @media screen and (min-width: 1400px) {
+    padding: 0;
+    width: 220px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
-export const AddItemBenefits = styled.li`
-  font-size: 16px;
-  line-height: 1;
-  letter-spacing: -0.46px;
-  font-weight: 700;
-  padding: 17px 13px;
+export const AddItemBenefits = styled(AddItemType)`
   color: ${p => p.theme.colors.linkAddSecondary};
   background-color: ${p => p.theme.colors.linkBacgroundAddSecondary};
   border: 1px solid #ffcf00;
-  border-radius: ${p => p.theme.radii.large};
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover {
-    transform: scale(1.01);
-  }
 `;
 
 export const ContactsWrap = styled.div`
-  width: 372px;
   margin: 0 auto;
   color: ${p => p.theme.colors.contactsPrimary};
   background-color: ${p => p.theme.colors.contactsBackground};
   border-radius: ${p => p.theme.radii.large};
+  @media screen and (min-width: 1400px) {
+    position: absolute;
+    top: 56px;
+    right: 0px;
+    width: 402px;
+  }
 `;
 
 export const ContactsText = styled.div`
@@ -305,6 +319,12 @@ export const ContactsName = styled.div`
   letter-spacing: 0.24px;
   font-weight: 700;
   margin-bottom: 17px;
+  @media screen and (min-width: 1400px) {
+    font-size: 20px;
+    line-height: 1.25;
+    letter-spacing: -0.63px;
+    margin-bottom: 8px;
+  }
 `;
 export const ContactsAddress = styled.div`
   display: flex;
@@ -314,6 +334,14 @@ export const ContactsAddress = styled.div`
   line-height: 1.442;
   letter-spacing: -0.5px;
   margin-bottom: 6px;
+  @media screen and (min-width: 1400px) {
+    font-family: Roboto, serif;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: -0.56px;
+    margin-bottom: 7px;
+    color: ${p => p.theme.colors.contactsDesSecondary};
+  }
   & > svg {
     opacity: 0.56;
   }
@@ -323,8 +351,36 @@ export const ContactsConnect = styled.div`
   line-height: 1.442;
   letter-spacing: -0.5px;
   color: ${p => p.theme.colors.contactsSecondary};
+  @media screen and (min-width: 1400px) {
+    font-family: Roboto, serif;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: -0.56px;
+    color: ${p => p.theme.colors.contactsDesSecondary};
+  }
 `;
 
 export const BackLink = styled(Link)`
-  display: none;
+  width: 213px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 19px;
+  background-color: rgba(56, 69, 100, 0.14);
+  border-radius: ${p => p.theme.radii.large};
+  & > svg {
+    color: black;
+  }
+  @media screen and (max-width: 1399px) {
+    margin-top: 50px;
+  }
+`;
+
+export const BackText = styled.p`
+  color: ${p => p.theme.colors.textDark};
+  font-size: 12px;
+  line-height: 1.33;
+  font-weight: 600;
+  text-transform: uppercase;
 `;

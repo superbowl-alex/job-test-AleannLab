@@ -19,7 +19,6 @@ import Stars from 'components/Stars';
 const JobCard = ({ job }) => {
   const { pictures, title, name, address, updatedAt } = job;
   const location = useLocation();
-
   return (
     <>
       <Link to="/details" state={{ from: location, job: job }}>

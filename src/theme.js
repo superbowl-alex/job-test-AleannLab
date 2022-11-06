@@ -12,6 +12,7 @@ export const theme = {
     linkBacgroundAddSecondary: 'rgba(255, 207, 0, 0.15)',
     contactsPrimary: '#E7EAF0',
     contactsSecondary: 'rgba(255, 255, 255, 0.669635)',
+    contactsDesSecondary: '#E8EBF3',
     contactsBackground: '#2A3047',
     white: '#FFFFFF',
   },

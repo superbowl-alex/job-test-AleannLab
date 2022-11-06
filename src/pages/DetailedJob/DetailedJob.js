@@ -34,13 +34,16 @@ import {
   BackLink,
   IconStar,
   IconBookmark,
+  TitleContacts,
+  BackText,
 } from './DetailedJob.styled';
 import { ReactComponent as IconShare } from '../../images/share.svg';
 import { ReactComponent as IconLocatuin } from '../../images/location.svg';
+import { ReactComponent as IconArrow } from '../../images/arrow.svg';
 
-const DetailedJob = () => {
-  const location = useLocation();
-  const backLinkHref = location.state?.from ?? '/';
+const DetailedJob = ({ job }) => {
+  const currentLocation = useLocation();
+  const backLinkHref = currentLocation.state?.from ?? '/';
   const {
     title,
     salary,
@@ -53,7 +56,7 @@ const DetailedJob = () => {
     address,
     phone,
     email,
-  } = location.state.job;
+  } = currentLocation.state.job;
 
   return (
     <Main>
@@ -118,8 +121,8 @@ const DetailedJob = () => {
             </AddWrap>
           </Section>
         </WrapAdditional>
-        <Section>
-          <Title>Contacts</Title>
+        <section>
+          <TitleContacts>Contacts</TitleContacts>
           <ContactsWrap>
             <ContactsText>
               <ContactsName>
@@ -137,9 +140,12 @@ const DetailedJob = () => {
             </ContactsText>
             <ContactsMap>Map</ContactsMap>
           </ContactsWrap>
-        </Section>
+        </section>
       </div>
-      <BackLink to={backLinkHref}>Return to job board</BackLink>
+      <BackLink to={backLinkHref}>
+        <IconArrow width={10} height={18} />
+        <BackText>Return to job board</BackText>
+      </BackLink>
     </Main>
   );
 };
