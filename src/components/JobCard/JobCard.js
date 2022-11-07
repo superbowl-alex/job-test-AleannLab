@@ -14,11 +14,23 @@ import {
 } from './JobCard.styled';
 import { ReactComponent as IconLocation } from '../../images/location.svg';
 import { ReactComponent as IconBookmark } from '../../images/bookmark.svg';
-import Stars from 'components/Stars';
+// import Stars from 'components/Stars';
+import React, { useState } from 'react';
+import { Rating } from 'react-simple-star-rating';
 
 const JobCard = ({ job }) => {
   const { pictures, title, name, address, updatedAt } = job;
   const location = useLocation();
+  const [rating, setRating] = useState(0);
+
+  const handleWrap = e => {
+    e.stopPropagation();
+  };
+
+  const handleRating = rate => {
+    setRating(rate);
+    console.log(rating);
+  };
   return (
     <>
       <Link to="/details" state={{ from: location, job: job }}>
@@ -35,7 +47,10 @@ const JobCard = ({ job }) => {
             </WrapTextInfo>
           </WrapMainInfo>
           <WrapAdditionalInfo>
-            <Stars count={5} />
+            {/* <Stars count={5} /> */}
+            <div onClick={handleWrap}>
+              <Rating onClick={handleRating} />
+            </div>
             <Note>
               <IconBookmark />
               <Post>Posted {moment(updatedAt).fromNow()} </Post>
