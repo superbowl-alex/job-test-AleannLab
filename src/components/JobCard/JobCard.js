@@ -1,4 +1,4 @@
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import moment from 'moment';
 import {
   WrapCard,
@@ -23,17 +23,21 @@ const JobCard = ({ job }) => {
   const location = useLocation();
   const [rating, setRating] = useState(0);
 
-  const handleWrap = e => {
+  const handleRating = (rate, e) => {
+    console.log(e);
     e.stopPropagation();
-  };
-
-  const handleRating = rate => {
+    e.preventDefault();
     setRating(rate);
     console.log(rating);
   };
+  const navigate = useNavigate();
   return (
     <>
-      <Link to="/details" state={{ from: location, job: job }}>
+      <div
+        onClick={() =>
+          navigate('/details', { state: { from: location, job: job } })
+        }
+      >
         <WrapCard>
           <WrapMainInfo>
             <Image src={pictures[0]} alt={name} loading="lazy" />
@@ -48,16 +52,14 @@ const JobCard = ({ job }) => {
           </WrapMainInfo>
           <WrapAdditionalInfo>
             {/* <Stars count={5} /> */}
-            <div onClick={handleWrap}>
-              <Rating onClick={handleRating} />
-            </div>
+            <Rating onClick={handleRating} />
             <Note>
               <IconBookmark />
               <Post>Posted {moment(updatedAt).fromNow()} </Post>
             </Note>
           </WrapAdditionalInfo>
         </WrapCard>
-      </Link>
+      </div>
     </>
   );
 };
