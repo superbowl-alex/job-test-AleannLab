@@ -23,12 +23,10 @@ const JobCard = ({ job }) => {
   const location = useLocation();
   const [rating, setRating] = useState(0);
 
-  const handleRating = (rate, e) => {
-    console.log(e);
-    e.stopPropagation();
-    e.preventDefault();
+  const handleRating = (rate, _, event) => {
+    event.stopPropagation();
     setRating(rate);
-    console.log(rating);
+    // console.log(rating);
   };
   const navigate = useNavigate();
   return (
