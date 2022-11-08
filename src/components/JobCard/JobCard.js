@@ -23,10 +23,13 @@ const JobCard = ({ job }) => {
   const location = useLocation();
   const [rating, setRating] = useState(0);
 
-  const handleRating = (rate, _, event) => {
-    event.stopPropagation();
+  const handleWrap = e => {
+    e.stopPropagation();
+  };
+
+  const handleRating = rate => {
     setRating(rate);
-    // console.log(rating);
+    console.log(rating);
   };
   const navigate = useNavigate();
   return (
@@ -50,7 +53,9 @@ const JobCard = ({ job }) => {
           </WrapMainInfo>
           <WrapAdditionalInfo>
             {/* <Stars count={5} /> */}
-            <Rating onClick={handleRating} />
+            <div onClick={handleWrap}>
+              <Rating onClick={handleRating} />
+            </div>
             <Note>
               <IconBookmark />
               <Post>Posted {moment(updatedAt).fromNow()} </Post>
