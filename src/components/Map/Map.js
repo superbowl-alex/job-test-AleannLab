@@ -9,12 +9,6 @@ const containerStyle = {
 
 const Map = ({ center }) => {
   const mapRef = React.useRef(undefined);
-  //   const { isLoaded } = useJsApiLoader({
-  //     id: 'google-map-script',
-  //     googleMapsApiKey: 'YOUR_API_KEY',
-  //   });
-
-  //   const [map, setMap] = React.useState(null);
 
   const onLoad = React.useCallback(function callback(map) {
     mapRef.current = map;

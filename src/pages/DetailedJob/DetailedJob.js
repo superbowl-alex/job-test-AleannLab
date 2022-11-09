@@ -59,11 +59,11 @@ const DetailedJob = ({ job }) => {
     address,
     phone,
     email,
+    location: { lat, long },
   } = currentLocation.state.job;
-
   const defaultCenter = {
-    lat: -3.745,
-    lng: -38.523,
+    lat: lat,
+    lng: long,
   };
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
