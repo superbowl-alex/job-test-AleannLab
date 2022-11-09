@@ -40,7 +40,10 @@ import {
 import { ReactComponent as IconShare } from '../../images/share.svg';
 import { ReactComponent as IconLocatuin } from '../../images/location.svg';
 import { ReactComponent as IconArrow } from '../../images/arrow.svg';
+import Map from 'components/Map';
+import { useJsApiLoader } from '@react-google-maps/api';
 
+const API_KEY = process.env.REACT_APP_API_KEY;
 const DetailedJob = ({ job }) => {
   const currentLocation = useLocation();
   const backLinkHref = currentLocation.state?.from ?? '/';
@@ -57,6 +60,15 @@ const DetailedJob = ({ job }) => {
     phone,
     email,
   } = currentLocation.state.job;
+
+  const defaultCenter = {
+    lat: -3.745,
+    lng: -38.523,
+  };
+  const { isLoaded } = useJsApiLoader({
+    id: 'google-map-script',
+    googleMapsApiKey: API_KEY,
+  });
 
   return (
     <Main>
@@ -138,7 +150,9 @@ const DetailedJob = ({ job }) => {
                 <p>{email}</p>
               </ContactsConnect>
             </ContactsText>
-            <ContactsMap>Map</ContactsMap>
+            <ContactsMap>
+              {isLoaded ? <Map center={defaultCenter} /> : <h2>Loading...</h2>}
+            </ContactsMap>
           </ContactsWrap>
         </section>
       </div>

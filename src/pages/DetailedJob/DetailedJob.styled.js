@@ -294,9 +294,8 @@ export const AddItemBenefits = styled(AddItemType)`
 
 export const ContactsWrap = styled.div`
   margin: 0 auto;
-  color: ${p => p.theme.colors.contactsPrimary};
-  background-color: ${p => p.theme.colors.contactsBackground};
   border-radius: ${p => p.theme.radii.large};
+  overflow: hidden;
   @media screen and (min-width: 1400px) {
     position: absolute;
     top: 56px;
@@ -306,11 +305,14 @@ export const ContactsWrap = styled.div`
 `;
 
 export const ContactsText = styled.div`
-  height: 200px;
+  height: 210px;
   padding: 31px 60px;
+  color: ${p => p.theme.colors.contactsPrimary};
+  background-color: ${p => p.theme.colors.contactsBackground};
 `;
 export const ContactsMap = styled.div`
-  height: 232px;
+  height: 222px;
+  width: 100%;
 `;
 
 export const ContactsName = styled.div`
