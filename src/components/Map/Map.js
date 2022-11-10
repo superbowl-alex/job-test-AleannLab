@@ -1,10 +1,33 @@
 import React from 'react';
-import { GoogleMap } from '@react-google-maps/api';
+import { GoogleMap, Marker } from '@react-google-maps/api';
 import { Container } from './Map.styled';
+import { DefaultTheme } from './Theme';
+import { ReactComponent as IconLocation } from '../../images/location.svg';
 
 const containerStyle = {
   width: '100%',
   height: '100%',
+};
+
+const defaultOptions = {
+  panControl: false,
+  zoomControl: false,
+  mapTypeControl: false,
+  scaleControl: false,
+  streetViewControl: false,
+  rotateControl: false,
+  clickableIcons: false,
+  keyboardShortcuts: false,
+  scrollwheel: true,
+  disableDoubleClickZoom: false,
+  fullscreenControl: false,
+  styles: DefaultTheme,
+};
+
+const markerOptions = {
+  color: '#3A4562',
+  backgroundColor: '#3A4562',
+  zIndex: 10,
 };
 
 const Map = ({ center }) => {
@@ -26,9 +49,9 @@ const Map = ({ center }) => {
         zoom={10}
         onLoad={onLoad}
         onUnmount={onUnmount}
+        options={defaultOptions}
       >
-        {/* Child components, such as markers, info windows, etc. */}
-        <></>
+        <Marker position={center} icon={{ url: '../../images/location.svg' }} />
       </GoogleMap>
     </Container>
   );

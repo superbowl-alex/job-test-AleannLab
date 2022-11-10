@@ -38,7 +38,7 @@ import {
   BackText,
 } from './DetailedJob.styled';
 import { ReactComponent as IconShare } from '../../images/share.svg';
-import { ReactComponent as IconLocatuin } from '../../images/location.svg';
+import { ReactComponent as IconLocation } from '../../images/location.svg';
 import { ReactComponent as IconArrow } from '../../images/arrow.svg';
 import Map from 'components/Map';
 import { useJsApiLoader } from '@react-google-maps/api';
@@ -61,7 +61,8 @@ const DetailedJob = ({ job }) => {
     email,
     location: { lat, long },
   } = currentLocation.state.job;
-  const defaultCenter = {
+
+  const currentCenter = {
     lat: lat,
     lng: long,
   };
@@ -142,7 +143,7 @@ const DetailedJob = ({ job }) => {
                 <p>{name}.</p>
               </ContactsName>
               <ContactsAddress>
-                <IconLocatuin width={13} height={19} />
+                <IconLocation width={13} height={19} />
                 <p>{address}</p>
               </ContactsAddress>
               <ContactsConnect>
@@ -151,7 +152,7 @@ const DetailedJob = ({ job }) => {
               </ContactsConnect>
             </ContactsText>
             <ContactsMap>
-              {isLoaded ? <Map center={defaultCenter} /> : <h2>Loading...</h2>}
+              {isLoaded ? <Map center={currentCenter} /> : <h2>Loading...</h2>}
             </ContactsMap>
           </ContactsWrap>
         </section>
