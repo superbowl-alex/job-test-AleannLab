@@ -42,6 +42,7 @@ import { ReactComponent as IconArrow } from '../../images/arrow.svg';
 import { ReactComponent as IconBookmark } from '../../images/bookmark.svg';
 import Map from 'components/Map';
 import { useJsApiLoader } from '@react-google-maps/api';
+import Loader from 'components/Loader';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 const DetailedJob = ({ job }) => {
@@ -152,7 +153,7 @@ const DetailedJob = ({ job }) => {
               </ContactsConnect>
             </ContactsText>
             <ContactsMap>
-              {isLoaded ? <Map center={currentCenter} /> : <h2>Loading...</h2>}
+              {isLoaded ? <Map center={currentCenter} /> : <Loader />}
             </ContactsMap>
           </ContactsWrap>
         </section>

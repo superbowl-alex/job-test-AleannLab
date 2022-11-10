@@ -121,7 +121,7 @@ export const SubTitle = styled.h3`
 
 export const WrapSalary = styled.div`
   position: absolute;
-  top: 125px;
+  top: 110%;
   right: 0;
   display: flex;
   flex-direction: column;
