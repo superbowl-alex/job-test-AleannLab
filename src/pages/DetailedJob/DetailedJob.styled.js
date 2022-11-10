@@ -1,7 +1,5 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
-import { ReactComponent as Star } from '../../images/star.svg';
-import { ReactComponent as Bookmark } from '../../images/bookmark.svg';
 
 export const Main = styled.main`
   padding: 24px 15px 37px;
@@ -74,18 +72,6 @@ export const WrapItem = styled.li`
     fill-opacity: 0;
     stroke: ${p => p.theme.colors.noteDetilesMobile};
     stroke-width: 2px;
-  }
-`;
-
-export const IconStar = styled(Star)`
-  @media screen and (min-width: 1400px) {
-    display: none;
-  }
-`;
-
-export const IconBookmark = styled(Bookmark)`
-  @media screen and (max-width: 1399px) {
-    display: none;
   }
 `;
 
@@ -305,17 +291,37 @@ export const ContactsWrap = styled.div`
 `;
 
 export const ContactsText = styled.div`
+  overflow: hidden;
+  position: relative;
   height: 210px;
   padding: 31px 60px;
   color: ${p => p.theme.colors.contactsPrimary};
   background-color: ${p => p.theme.colors.contactsBackground};
 `;
+
+export const Circle = styled.div`
+  display: none;
+  position: absolute;
+  z-index: 0;
+  height: 273px;
+  width: 273px;
+  background-color: ${p => p.theme.colors.circleBackground};
+  left: -20%;
+  top: -20%;
+  border-radius: ${p => p.theme.radii.round};
+  @media screen and (min-width: 1400px) {
+    display: block;
+  }
+`;
+
 export const ContactsMap = styled.div`
   height: 222px;
   width: 100%;
 `;
 
 export const ContactsName = styled.div`
+  z-index: 1;
+  position: relative;
   font-size: 16px;
   line-height: 1.22;
   letter-spacing: 0.24px;
@@ -329,6 +335,8 @@ export const ContactsName = styled.div`
   }
 `;
 export const ContactsAddress = styled.div`
+  z-index: 1;
+  position: relative;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -349,6 +357,8 @@ export const ContactsAddress = styled.div`
   }
 `;
 export const ContactsConnect = styled.div`
+  z-index: 1;
+  position: relative;
   font-size: 16px;
   line-height: 1.442;
   letter-spacing: -0.5px;

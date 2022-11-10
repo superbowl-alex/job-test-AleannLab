@@ -7,9 +7,12 @@ export const WrapCard = styled.div`
   align-items: center;
   padding: 16px 16px 24px;
   color: ${p => p.theme.colors.textSecondary};
+  cursor: pointer;
   @media screen and (min-width: 1400px) {
+    height: 164px;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding: 16px 24px;
   }
 `;
@@ -33,8 +36,18 @@ export const WrapAdditionalInfo = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-left: 32px;
+    margin-left: auto;
     margin-bottom: 0;
+  }
+`;
+
+export const WrapRaiting = styled.div`
+  & svg {
+    @media screen and (min-width: 1400px) {
+      width: 22px;
+      height: 21px;
+      margin-right: 0;
+    }
   }
 `;
 

@@ -14,6 +14,7 @@ export const theme = {
     contactsSecondary: 'rgba(255, 255, 255, 0.669635)',
     contactsDesSecondary: '#E8EBF3',
     contactsBackground: '#2A3047',
+    circleBackground: '#202336',
     white: '#FFFFFF',
   },
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],

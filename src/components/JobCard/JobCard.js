@@ -11,17 +11,19 @@ import {
   Address,
   Note,
   Post,
+  WrapRaiting,
 } from './JobCard.styled';
 import { ReactComponent as IconLocation } from '../../images/location.svg';
 import { ReactComponent as IconBookmark } from '../../images/bookmark.svg';
 // import Stars from 'components/Stars';
-import React, { useState } from 'react';
+import React from 'react';
 import { Rating } from 'react-simple-star-rating';
+import { useLocalStorage } from 'hooks/useLocalStorage';
 
 const JobCard = ({ job }) => {
-  const { pictures, title, name, address, updatedAt } = job;
+  const { pictures, title, name, address, updatedAt, id } = job;
   const location = useLocation();
-  const [rating, setRating] = useState(0);
+  const [rating, setRating] = useLocalStorage('rating', id, 0);
 
   const handleWrap = e => {
     e.stopPropagation();
@@ -29,7 +31,6 @@ const JobCard = ({ job }) => {
 
   const handleRating = rate => {
     setRating(rate);
-    console.log(rating);
   };
   const navigate = useNavigate();
   return (
@@ -52,10 +53,14 @@ const JobCard = ({ job }) => {
             </WrapTextInfo>
           </WrapMainInfo>
           <WrapAdditionalInfo>
-            {/* <Stars count={5} /> */}
-            <div onClick={handleWrap}>
-              <Rating onClick={handleRating} />
-            </div>
+            <WrapRaiting onClick={handleWrap}>
+              <Rating
+                initialValue={rating}
+                onClick={handleRating}
+                size={10}
+                fillColor={'#38415D'}
+              />
+            </WrapRaiting>
             <Note>
               <IconBookmark />
               <Post>Posted {moment(updatedAt).fromNow()} </Post>

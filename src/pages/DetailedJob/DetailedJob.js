@@ -32,14 +32,14 @@ import {
   ContactsAddress,
   ContactsConnect,
   BackLink,
-  IconStar,
-  IconBookmark,
   TitleContacts,
   BackText,
+  Circle,
 } from './DetailedJob.styled';
 import { ReactComponent as IconShare } from '../../images/share.svg';
 import { ReactComponent as IconLocation } from '../../images/location.svg';
 import { ReactComponent as IconArrow } from '../../images/arrow.svg';
+import { ReactComponent as IconBookmark } from '../../images/bookmark.svg';
 import Map from 'components/Map';
 import { useJsApiLoader } from '@react-google-maps/api';
 
@@ -79,7 +79,6 @@ const DetailedJob = ({ job }) => {
             <Title>Job details</Title>
             <NoteList>
               <WrapItem>
-                <IconStar width={21} height={20} />
                 <IconBookmark width={25} height={25} />
                 <p>Save to my list</p>
               </WrapItem>
@@ -138,6 +137,7 @@ const DetailedJob = ({ job }) => {
           <TitleContacts>Contacts</TitleContacts>
           <ContactsWrap>
             <ContactsText>
+              <Circle></Circle>
               <ContactsName>
                 <p>Deparment name.</p>
                 <p>{name}.</p>
