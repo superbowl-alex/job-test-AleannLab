@@ -17,7 +17,7 @@ export const Title = styled.h2`
   padding-bottom: 12px;
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-bottom-color: rgba(58, 69, 98, 0.13);
+  border-bottom-color: ${p => p.theme.colors.borderBottomTitle};
   margin-bottom: 24px;
   @media screen and (min-width: 1400px) {
     padding-bottom: 9px;

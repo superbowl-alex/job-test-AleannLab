@@ -16,7 +16,7 @@ export const BackLink = styled(Link)`
   align-items: center;
   justify-content: center;
   gap: 19px;
-  background-color: rgba(56, 69, 100, 0.14);
+  background-color: ${p => p.theme.colors.backLink};
   border-radius: ${p => p.theme.radii.large};
   & > svg {
     color: black;

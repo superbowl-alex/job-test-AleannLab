@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 
 export const ErrorAllert = styled.div`
-  font-size: ${p => p.theme.fontSizes.xxl};
+  font-size: 48px;
   color: ${p => p.theme.colors.buttonHoverColor};
-  padding: ${p => p.theme.space[4]}px;
+  padding: 16px;
   margin: 0 auto;
 `;
