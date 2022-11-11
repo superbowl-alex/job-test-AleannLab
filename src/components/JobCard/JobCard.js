@@ -16,7 +16,6 @@ import {
 } from './JobCard.styled';
 import { ReactComponent as IconLocation } from '../../images/location.svg';
 import { ReactComponent as IconBookmark } from '../../images/bookmark.svg';
-// import Stars from 'components/Stars';
 import React from 'react';
 import { Rating } from 'react-simple-star-rating';
 import { useLocalStorage } from 'hooks/useLocalStorage';

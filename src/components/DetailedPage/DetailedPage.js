@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { useLocation } from 'react-router-dom';
 import { WrapAdditional, BackLink, BackText } from './DetailedPage.styled';
 import { ReactComponent as IconArrow } from '../../images/arrow.svg';
@@ -7,7 +6,7 @@ import ImageSection from './ImageSection';
 import AddInfoSection from './AddInfoSection';
 import ContactsSection from './ContactsSection';
 
-const DetailedPage = ({ job }) => {
+const DetailedPage = () => {
   const currentLocation = useLocation();
   const backLinkHref = currentLocation.state?.from ?? '/';
   const {
@@ -51,10 +50,6 @@ const DetailedPage = ({ job }) => {
       </BackLink>
     </>
   );
-};
-
-DetailedPage.propTypes = {
-  job: PropTypes.object,
 };
 
 export default DetailedPage;
