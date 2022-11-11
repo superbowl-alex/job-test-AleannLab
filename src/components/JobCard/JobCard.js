@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useLocation, useNavigate } from 'react-router-dom';
 import moment from 'moment';
 import {
@@ -70,6 +71,10 @@ const JobCard = ({ job }) => {
       </div>
     </>
   );
+};
+
+JobCard.propTypes = {
+  job: PropTypes.object.isRequired,
 };
 
 export default JobCard;

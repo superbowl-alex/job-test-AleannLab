@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { fetchJobs } from 'services/fetchJobs';
 import ErrorMessage from 'components/ErrorMessage';
-import JobCard from 'components/JobCard';
-import { List, Item } from './JobList.styled';
 import Loader from 'components/Loader';
 import Pagination from 'components/Pagination';
+import JobsOnCurrentPage from 'components/JobList/JobsOnCurrentPage';
 
 const ITEMS_PER_PAGE = 10;
 
@@ -41,22 +40,6 @@ const JobList = () => {
   const handlePageClick = event => {
     const newOffset = (event.selected * ITEMS_PER_PAGE) % jobs.length;
     setItemOffset(newOffset);
-  };
-
-  const JobsOnCurrentPage = ({ currentJobs }) => {
-    if (!currentJobs) {
-      return null;
-    }
-    return (
-      <List>
-        {currentJobs &&
-          currentJobs.map(job => (
-            <Item key={job.id}>
-              <JobCard job={job}></JobCard>
-            </Item>
-          ))}
-      </List>
-    );
   };
 
   return (
