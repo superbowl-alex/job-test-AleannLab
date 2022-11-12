@@ -23,7 +23,6 @@ const defaultOptions = {
   fullscreenControl: false,
   styles: DefaultTheme,
 };
-
 const Map = ({ center }) => {
   const mapRef = React.useRef(undefined);
 
@@ -44,7 +43,7 @@ const Map = ({ center }) => {
         onUnmount={onUnmount}
         options={defaultOptions}
       >
-        <MarkerF onLoad={onLoad} position={center} />
+        <MarkerF position={center} />
       </GoogleMap>
     </Container>
   );
