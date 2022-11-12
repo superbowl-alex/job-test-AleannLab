@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { GoogleMap, Marker } from '@react-google-maps/api';
 import { Container } from './Map.styled';
 import { DefaultTheme } from './Theme';
@@ -48,6 +49,10 @@ const Map = ({ center }) => {
       </GoogleMap>
     </Container>
   );
+};
+
+Map.propTypes = {
+  center: PropTypes.object.isRequired,
 };
 
 export default React.memo(Map);
