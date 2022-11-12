@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { GoogleMap, Marker } from '@react-google-maps/api';
+import { GoogleMap, MarkerF } from '@react-google-maps/api';
 import { Container } from './Map.styled';
 import { DefaultTheme } from './Theme';
 
@@ -34,7 +34,6 @@ const Map = ({ center }) => {
   const onUnmount = React.useCallback(function callback(map) {
     mapRef.current = undefined;
   }, []);
-
   return (
     <Container>
       <GoogleMap
@@ -45,7 +44,7 @@ const Map = ({ center }) => {
         onUnmount={onUnmount}
         options={defaultOptions}
       >
-        <Marker position={center} />
+        <MarkerF onLoad={onLoad} position={center} />
       </GoogleMap>
     </Container>
   );
